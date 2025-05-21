@@ -1,0 +1,12 @@
+Flask==2.3.3
+Werkzeug==2.3.7
+faiss-cpu==1.7.4
+numpy==1.24.4
+requests==2.31.0
+aiohttp==3.9.1
+pymorphy2==0.9.1
+tqdm==4.66.1
+rank-bm25==0.2.2
+sentence-transformers==2.2.2
+gunicorn==21.2.0
+python-dotenv==1.0.0

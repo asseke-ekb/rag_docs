@@ -1,0 +1,26 @@
+version: '3'
+
+services:
+  webapp:
+    build: .
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./docs:/app/docs
+      - ./uploads:/app/uploads
+      - ./cache:/app/cache
+      - ./logs:/app/logs
+    restart: always
+    environment:
+      - FLASK_ENV=production
+
+  ollama:
+    image: ollama/ollama:latest
+    ports:
+      - "11434:11434"
+    volumes:
+      - ollama_data:/root/.ollama
+    restart: always
+
+volumes:
+  ollama_data:
